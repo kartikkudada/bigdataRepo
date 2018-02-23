@@ -1,0 +1,16 @@
+commands to execute mapper and reducer progam in hdfs environment with hadoop streaming 
+
+$hadoop jar hadoop-mapreduce/hadoop-streaming.jar -input <HDFS_LOCATIOIN>/attachment_Emails.csv -output <HDFS_LOCATION>/email 
+-file myemail_mapper.py -file myemail_reducer.py -mapper "myemail_mapper.py" -reducer "myemail_reducer.py"
+
+This mapper and reducer program to find out top 3 persons who mail hilary. 
+Below is the description of attachment_emails.csv
+
+Id - 
+DocNumber - 
+MetadataSubject
+MetadataTo - email sender
+Metadatafrom - email reciever
+senderpersonId -
+metadatadatesent
+metadatadatereleased
